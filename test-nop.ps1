@@ -26,6 +26,10 @@ try {
     Write-Output "StatusCode: $($content.StatusCode)" 
     Write-Output $content.Content
 
+    if($content.Content.Contains("/Install/RestartApplication")){
+        
+    }
+
     Write-Output "restall"
     Invoke-WebRequest "https://localhost:5001/Install/RestartApplication" -ContentType 'text/html;charset=UTF-8' -Method GET
     
